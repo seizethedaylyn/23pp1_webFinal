@@ -172,3 +172,8 @@ label[for="stunumber"] {
 .time1{
     font-size: 20px;
 }
+
+#Date{
+    margin-left: 10px;
+    font-size: 15px;
+}

@@ -217,3 +217,13 @@ label[for="stunumber"] {
     /* 여기서 top margin을 2%로 설정 */
     text-align: left;
 }
+
+#textarea1{
+    width : 90%;
+}
+
+
+#Date{
+    margin-left: 10px;
+    font-size: 15px;
+}
