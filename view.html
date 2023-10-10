@@ -29,7 +29,7 @@
             height: 20px;
             padding: 1%;
             width: 50%; /* Adjust the width to your preference */
-            margin-right: 15%;
+            margin-right: 18%;
             margin-top: 3%;
         }
 
@@ -49,7 +49,7 @@
             text-align: left;
             height: 20px;
             padding: 1%;
-            margin-left: 15%;
+            margin-left: 18%;
             width: 50%; /* Adjust the width to your preference */
             font-size: 16px; /* Adjust the font size to your preference */
         }
@@ -116,6 +116,7 @@
             <p><strong>주제:</strong> 프로젝트<span id="subject"></span></p>
             <p><strong>날짜:</strong> 10/25<span id="date"></span></p>
             <p><strong>장소:</strong> 오피스<span id="place"></span></p>
+            <p><strong>전하고 싶은 말:</strong> 지금 준비하고 있는 프로젝트 컨펌 받고 싶습니다.<span id="place"></span></p>
 
         </div>
 
@@ -124,7 +125,7 @@
     <div class="footer">
         <div class="button">
             <button class="large-button" onclick="location.href='edit.html'">수정</button>
-            <button class="large-button" onclick="call_confirm()">삭제</button>
+            <button class="large-button" onclick="delete_confirm()">삭제</button>
         </div>
     </div>
 </div>
@@ -148,7 +149,7 @@
         window.history.back();
     }
 
-    function call_confirm(){
+    function delete_confirm(){
 
         if(confirm("삭제하시겠습니까?")){
             alert("삭제됨");
