@@ -1,0 +1,57 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-image: linear-gradient(to top, white, dodgerblue);
+}
+
+.header {
+    margin: 0;
+}
+.container {
+    width: 70%;
+    margin: 2% auto;
+}
+
+.consultation {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.consultation h3 {
+    margin: 0;
+}
+
+.consultation p {
+    margin: 0;
+}
+
+.consultation:hover {
+    background-color: #dddddd;
+}
+
+.add-button {
+    transform: translateX(-50%);
+    background-color: #A8C0FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-right: -35px;
+}
+
+.add-button:hover {
+    background-color: #071952;
+}
+
+.diviv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}

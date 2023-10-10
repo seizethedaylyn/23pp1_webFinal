@@ -1,134 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>📝상담 신청 정보📝</title>
-    <style>
-        body{
-            font-family: "Arial", sans-serif;
-            background-image: linear-gradient(to top, white, dodgerblue);
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>📝상담 신청 정보📝</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="my.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="diviv">
+                    <h2>상담 신청 정보</h2>
+                    <button class="add-button" onclick="location.href='add.html'">Add</button>
+                </div>
+            </div>
+            <div
+                class="consultation"
+                onclick="redirectToView('김현승', '22000202', '월', '11시30분')">
+                <h3>상담 1</h3>
+                <p>
+                    <strong>이름:</strong>
+                    김현승</p>
+                <p>
+                    <strong>학번:</strong>
+                    22000202</p>
+                <p>
+                    <strong>상담 요일:</strong>
+                    월</p>
+                <p>
+                    <strong>상담 시간:</strong>
+                    11시 30분</p>
+            </div>
+            <div
+                class="consultation"
+                onclick="redirectToView('박지성', '21700305', '수', '12시 30분')">
+                <h3>상담 2</h3>
+                <p>
+                    <strong>이름:</strong>
+                    박지성</p>
+                <p>
+                    <strong>학번:</strong>
+                    21700305</p>
+                <p>
+                    <strong>상담 요일:</strong>
+                    수</p>
+                <p>
+                    <strong>상담 시간:</strong>
+                    12시 30분</p>
+            </div>
+            <div
+                class="consultation"
+                onclick="redirectToView('김채린', '22000189', '목', '3시 00분')">
+                <h3>상담 3</h3>
+                <p>
+                    <strong>이름:</strong>
+                    김채린</p>
+                <p>
+                    <strong>학번:</strong>
+                    22000189</p>
+                <p>
+                    <strong>상담 요일:</strong>
+                    목</p>
+                <p>
+                    <strong>상담 시간:</strong>
+                    3시 00분</p>
+            </div>
+            <div
+                class="consultation"
+                onclick="redirectToView('김현중', '22100234', '수', '4시 30분')">
+                <h3>상담 4</h3>
+                <p>
+                    <strong>이름:</strong>
+                    김현중</p>
+                <p>
+                    <strong>학번:</strong>
+                    22100234</p>
+                <p>
+                    <strong>상담 요일:</strong>
+                    수</p>
+                <p>
+                    <strong>상담 시간:</strong>
+                    4시 30분</p>
+            </div>
+            <div
+                class="consultation"
+                onclick="redirectToView('박민지', '21900461', '금', '9시 30분')">
+                <h3>상담 5</h3>
+                <p>
+                    <strong>이름:</strong>
+                    박민지</p>
+                <p>
+                    <strong>학번:</strong>
+                    21900461</p>
+                <p>
+                    <strong>상담 요일:</strong>
+                    금</p>
+                <p>
+                    <strong>상담 시간:</strong>
+                    9시 30분</p>
+            </div>
+            <div
+                class="consultation"
+                onclick="redirectToView('박주영', '21800495', '화', '2시 30분')">
+                <h3>상담 6</h3>
+                <p>
+                    <strong>이름:</strong>
+                    박주영</p>
+                <p>
+                    <strong>학번:</strong>
+                    21800495</p>
+                <p>
+                    <strong>상담 요일:</strong>
+                    화</p>
+                <p>
+                    <strong>상담 시간:</strong>
+                    2시 30분</p>
+            </div>
 
-        .header{
-            margin: 0;
-        }
-        .container {
-            width: 70%;
-            margin: 2% auto;
-        }
+            <div
+                class="consultation"
+                onclick="redirectToView('박정규', '22100294', '금', '5시 30분')">
+                <h3>상담 7</h3>
+                <p>
+                    <strong>이름:</strong>
+                    박정규</p>
+                <p>
+                    <strong>학번:</strong>
+                    22100294</p>
+                <p>
+                    <strong>상담 요일:</strong>
+                    금</p>
+                <p>
+                    <strong>상담 시간:</strong>
+                    5시 30분</p>
+            </div>
 
-        .consultation {
-            border: 1px solid #dddddd;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #f2f2f2;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
-
-        .consultation h3 {
-            margin: 0;
-        }
-
-        .consultation p {
-            margin: 0;
-        }
-
-        .consultation:hover {
-            background-color: #dddddd;
-        }
-
-        .add-button {
-            transform: translateX(-50%);
-            background-color: #A8C0FF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-align: center;
-            margin-right: -35px;
-        }
-
-        .add-button:hover{
-            background-color: #071952;
-        }
-
-        .diviv {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            justify-content: space-between;
-        }
-
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="header">
-        <div class="diviv">
-            <h2>상담 신청 정보</h2>
-                <button class="add-button" onclick="location.href='add.html'">Add</button>
         </div>
-    </div>
-    <div class="consultation" onclick="redirectToView('김현승', '22000202', '월', '11시30분')">
-        <h3>상담 1</h3>
-        <p><strong>이름:</strong> 김현승</p>
-        <p><strong>학번:</strong> 22000202</p>
-        <p><strong>상담 요일:</strong> 월</p>
-        <p><strong>상담 시간:</strong> 11시 30분</p>
-    </div>
-    <div class="consultation" onclick="redirectToView('박지성', '21700305', '수', '12시 30분')">
-        <h3>상담 2</h3>
-        <p><strong>이름:</strong> 박지성</p>
-        <p><strong>학번:</strong> 21700305</p>
-        <p><strong>상담 요일:</strong> 수</p>
-        <p><strong>상담 시간:</strong> 12시 30분</p>
-    </div>
-    <div class="consultation" onclick="redirectToView('김채린', '22000189', '목', '3시 00분')">
-        <h3>상담 3</h3>
-        <p><strong>이름:</strong> 김채린</p>
-        <p><strong>학번:</strong> 22000189</p>
-        <p><strong>상담 요일:</strong> 목</p>
-        <p><strong>상담 시간:</strong> 3시 00분</p>
-    </div>
-    <div class="consultation" onclick="redirectToView('김현중', '22100234', '수', '4시 30분')">
-        <h3>상담 4</h3>
-        <p><strong>이름:</strong> 김현중</p>
-        <p><strong>학번:</strong> 22100234</p>
-        <p><strong>상담 요일:</strong> 수</p>
-        <p><strong>상담 시간:</strong> 4시 30분</p>
-    </div>
-    <div class="consultation" onclick="redirectToView('박민지', '21900461', '금', '9시 30분')">
-        <h3>상담 5</h3>
-        <p><strong>이름:</strong> 박민지</p>
-        <p><strong>학번:</strong> 21900461</p>
-        <p><strong>상담 요일:</strong> 금</p>
-        <p><strong>상담 시간:</strong> 9시 30분</p>
-    </div>
-    <div class="consultation" onclick="redirectToView('박주영', '21800495', '화', '2시 30분')">
-        <h3>상담 6</h3>
-        <p><strong>이름:</strong> 박주영</p>
-        <p><strong>학번:</strong> 21800495</p>
-        <p><strong>상담 요일:</strong> 화</p>
-        <p><strong>상담 시간:</strong> 2시 30분</p>
-    </div>
-
-    <div class="consultation" onclick="redirectToView('박정규', '22100294', '금', '5시 30분')">
-        <h3>상담 7</h3>
-        <p><strong>이름:</strong> 박정규</p>
-        <p><strong>학번:</strong> 22100294</p>
-        <p><strong>상담 요일:</strong> 금</p>
-        <p><strong>상담 시간:</strong> 5시 30분</p>
-    </div>
-    
-</div>
-<script>
-    // 해당 consultation 정보를 view.html로 전달하는 함수
-    function redirectToView(name, studentId, day1, time1) {
-        window.location.href = `view.html?name=${name}&student_id=${studentId}&day1=${day1}&time1=${time1}`;
-    }
-</script>
-</body>
+        <script>
+            // 해당 consultation 정보를 view.html로 전달하는 함수
+            function redirectToView(name, studentId, day1, time1) {
+                window.location.href = `view.html?name=${name}&student_id=${studentId}&day1=${day1}&time1=${time1}`;
+            }
+        </script>
+    </body>
 </html>

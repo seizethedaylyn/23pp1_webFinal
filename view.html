@@ -1,161 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>🔎상담 정보 상세 보기🔎</title>
-    <style>
-        body{
-            font-family: "Arial", sans-serif;
-            background-image: linear-gradient(to top, white, dodgerblue);
-            background-repeat: no-repeat; /* 배경 그라데이션 반복 비활성화 */
-            background-attachment: fixed; /* 스크롤과 함께 배경 고정 */
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>🔎상담 정보 상세 보기🔎</title>
+        <link rel="stylesheet" href="my.css">
+        <link rel="stylesheet" href="view.css">
 
-        .container {
-            width: 60%;
-            height: 100%;
-            margin: 2% auto;
-            padding: 20px;
-            background-color: #f2f2f2;
-        }
+    </head>
+    <body>
+        <div class="screen">
+            <div class="header">
+                <div class="subject">
+                    <h2>상담 정보 상세 보기</h2>
+                </div>
+                <div class="top-button">
+                    <button class="back-button" onclick="goBack()">뒤로 가기</button>
+                </div>
 
-        .header{
-            display: flex;
-            height: 70px;
-        }
+            </div>
+            <div class="container">
 
-        .top-button{
-            text-align: right;
-            height: 20px;
-            padding: 1%;
-            width: 50%; /* Adjust the width to your preference */
-            margin-right: 18%;
-            margin-top: 3%;
-        }
+                <div class="consultation-details">
+                    <h3>상담 정보</h3>
+                    <p>
+                        <strong>이름:</strong>
+                        <span id="name"></span></p>
+                    <p>
+                        <strong>학번:</strong>
+                        <span id="student-id"></span></p>
+                    <p>
+                        <strong>전화번호:</strong>
+                        01012345678<span id="pnumber"></span></p>
+                    <p>
+                        <strong>이메일:</strong>
+                        asdf@naver.com<span id="email"></span></p>
+                    <p>
+                        <strong>상담 요일1:</strong>
+                        <span id="day1"></span></p>
+                    <p>
+                        <strong>상담 시간1:</strong>
+                        <span id="time1"></span></p>
+                    <p>
+                        <strong>상담 요일2:</strong>
+                        수<span id="day2"></span></p>
+                    <p>
+                        <strong>상담 시간2:</strong>
+                        4시00분<span id="time2"></span></p>
+                    <p>
+                        <strong>상담 요일3:</strong>
+                        목<span id="day3"></span></p>
+                    <p>
+                        <strong>상담 시간3:</strong>
+                        3시30분<span id="time3"></span></p>
+                    <p>
+                        <strong>주제:</strong>
+                        프로젝트<span id="subject"></span></p>
+                    <p>
+                        <strong>날짜:</strong>
+                        10/25<span id="date"></span></p>
+                    <p>
+                        <strong>장소:</strong>
+                        오피스<span id="place"></span></p>
+                    <p>
+                        <strong>전하고 싶은 말:</strong>
+                        지금 준비하고 있는 프로젝트 컨펌 받고 싶습니다.<span id="place"></span></p>
 
-        .back-button {
-            font-size: 18px;
-            border: none;
-            background-color: #f2f2f2;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
+                </div>
 
-        .back-button:hover{
-            background-color: #E2E0D8FF;
-        }
+            </div>
 
-        .subject{
-            text-align: left;
-            height: 20px;
-            padding: 1%;
-            margin-left: 18%;
-            width: 50%; /* Adjust the width to your preference */
-            font-size: 16px; /* Adjust the font size to your preference */
-        }
-
-        .consultation-details h2 {
-            margin: 0;
-        }
-
-        .consultation-details p {
-            margin: 0;
-            margin-bottom: 4px;
-        }
-
-        .footer{
-            text-align: center;
-        }
-
-        .button {
-            text-align: center; /* 텍스트를 가운데 정렬 */
-        }
-
-        .large-button {
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            background-color: #f2f2f2;
-            transition: background-color 0.3s;
-            line-height: 1;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .large-button:hover {
-            background-color: #E2E0D8FF;
-        }
-
-    </style>
-</head>
-<body>
-<div class="screen">
-    <div class="header">
-        <div class="subject">
-            <h2>상담 정보 상세 보기</h2>
-        </div>
-        <div class="top-button">
-            <button class="back-button" onclick="goBack()">뒤로 가기</button>
+            <div class="footer">
+                <div class="button">
+                    <button class="large-button" onclick="location.href='edit.html'">수정</button>
+                    <button class="large-button" onclick="delete_confirm()">삭제</button>
+                </div>
+            </div>
         </div>
 
-    </div>
-    <div class="container">
+        <script>
+            // URL 매개변수를 가져와서 해당 정보를 표시
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const studentId = urlParams.get('student_id');
+            const day1 = urlParams.get('day1');
+            const time1 = urlParams.get('time1');
 
-        <div class="consultation-details">
-            <h3>상담 정보</h3>
-            <p><strong>이름:</strong> <span id="name"></span></p>
-            <p><strong>학번:</strong> <span id="student-id"></span></p>
-            <p><strong>전화번호:</strong> 01012345678<span id="pnumber"></span></p>
-            <p><strong>이메일:</strong> asdf@naver.com<span id="email"></span></p>
-            <p><strong>상담 요일1:</strong> <span id="day1"></span></p>
-            <p><strong>상담 시간1:</strong> <span id="time1"></span></p>
-            <p><strong>상담 요일2:</strong> 수<span id="day2"></span></p>
-            <p><strong>상담 시간2:</strong> 4시00분<span id="time2"></span></p>
-            <p><strong>상담 요일3:</strong> 목<span id="day3"></span></p>
-            <p><strong>상담 시간3:</strong> 3시30분<span id="time3"></span></p>
-            <p><strong>주제:</strong> 프로젝트<span id="subject"></span></p>
-            <p><strong>날짜:</strong> 10/25<span id="date"></span></p>
-            <p><strong>장소:</strong> 오피스<span id="place"></span></p>
-            <p><strong>전하고 싶은 말:</strong> 지금 준비하고 있는 프로젝트 컨펌 받고 싶습니다.<span id="place"></span></p>
+            document
+                .getElementById('name')
+                .textContent = name;
+            document
+                .getElementById('student-id')
+                .textContent = studentId;
+            document
+                .getElementById('day1')
+                .textContent = day1;
+            document
+                .getElementById('time1')
+                .textContent = time1;
 
-        </div>
+            // 뒤로 가기 버튼을 클릭했을 때 이전 페이지로 이동
+            function goBack() {
+                window
+                    .history
+                    .back();
+            }
 
-    </div>
+            function delete_confirm() {
 
-    <div class="footer">
-        <div class="button">
-            <button class="large-button" onclick="location.href='edit.html'">수정</button>
-            <button class="large-button" onclick="delete_confirm()">삭제</button>
-        </div>
-    </div>
-</div>
+                if (confirm("삭제하시겠습니까?")) {
+                    alert("삭제됨");
+                }
 
-
-<script>
-    // URL 매개변수를 가져와서 해당 정보를 표시
-    const urlParams = new URLSearchParams(window.location.search);
-    const name = urlParams.get('name');
-    const studentId = urlParams.get('student_id');
-    const day1 = urlParams.get('day1');
-    const time1 = urlParams.get('time1');
-
-    document.getElementById('name').textContent = name;
-    document.getElementById('student-id').textContent = studentId;
-    document.getElementById('day1').textContent = day1;
-    document.getElementById('time1').textContent = time1;
-
-    // 뒤로 가기 버튼을 클릭했을 때 이전 페이지로 이동
-    function goBack() {
-        window.history.back();
-    }
-
-    function delete_confirm(){
-
-        if(confirm("삭제하시겠습니까?")){
-            alert("삭제됨");
-        }
-
-    }
-</script>
-</body>
+            }
+        </script>
+    </body>
 </html>
