@@ -25,46 +25,60 @@
                 <div class="consultation-details">
                     <h3>상담 정보</h3>
                     <p>
-                        <strong>이름:</strong>김채린
-                        <span id="name"></span></p>
+                        <strong>이름
+                        </strong>김채린
+                        <span id="name" ></span></p>
                     <p>
-                        <strong>학번:</strong>
+                        <strong>학번:
+                        </strong>
                         22000189<span id="student-id"></span></p>
                     <p>
-                        <strong>전화번호:</strong>
+                        <strong>전화번호:
+                        </strong>
                         01012345678<span id="pnumber"></span></p>
                     <p>
-                        <strong>이메일:</strong>
+                        <strong>이메일:
+                        </strong>
                         asdf@naver.com<span id="email"></span></p>
                     <p>
-                        <strong>상담 요일1:</strong>
+                        <strong>상담 요일1:
+                        </strong>
                         화<span id="day1"></span></p>
                     <p>
-                        <strong>상담 시간1:</strong>
+                        <strong>상담 시간1:
+                        </strong>
                         11시00분<span id="time1"></span></p>
                     <p>
-                        <strong>상담 요일2:</strong>
+                        <strong>상담 요일2:
+                        </strong>
                         수<span id="day2"></span></p>
                     <p>
-                        <strong>상담 시간2:</strong>
+                        <strong>상담 시간2:
+                        </strong>
                         4시00분<span id="time2"></span></p>
                     <p>
-                        <strong>상담 요일3:</strong>
+                        <strong>상담 요일3:
+                        </strong>
                         목<span id="day3"></span></p>
                     <p>
-                        <strong>상담 시간3:</strong>
+                        <strong>상담 시간3:
+                        </strong>
                         3시30분<span id="time3"></span></p>
                     <p>
-                        <strong>주제:</strong>
+                        <strong>주제:
+                        </strong>
                         프로젝트<span id="subject"></span></p>
                     <p>
-                        <strong>날짜:</strong>
+                        <strong>날짜:
+                        </strong>
                         10/25<span id="date"></span></p>
                     <p>
-                        <strong>장소:</strong>
+                        <strong>장소:
+                        </strong>
                         오피스<span id="place"></span></p>
                     <p>
-                        <strong>전하고 싶은 말:</strong>
+                        <strong>전하고 싶은 말:
+                        </strong>
                         지금 준비하고 있는 프로젝트 컨펌 받고 싶습니다.<span id="place"></span></p>
 
                 </div>
@@ -81,17 +95,19 @@
                             <label for="name">이름<br></label>
                             <input
                                 type="text"
-                                id="name1"
+                                id="name"
                                 name="name"
                                 style="width:80%;height:20px;font-size:14px;"
+                                value="김채린"
                                 required="required"><br><br>
 
                             <label for="email">Email<br></label>
                             <input
                                 type="text"
-                                id="email1"
+                                id="email"
                                 name="email"
                                 style="width:80%;height:20px;font-size:14px;"
+                                value="rlacofls"
                                 required="required"><br>
                         </div>
                         <div class="student_info2">
@@ -99,17 +115,19 @@
                             <label for="pnumber">전화번호<br></label>
                             <input
                                 type="text"
-                                id="pnumber1"
+                                id="pnumber"
                                 name="pnumber"
                                 style="width:80%;height:20px;font-size:14px;"
+                                value="010-1234-1234"
                                 required="required"><br><br>
 
                             <label for="number">학번<br></label>
                             <input
                                 type="text"
-                                id="number1"
+                                id="number"
                                 name="number"
                                 style="width:80%;height:20px;font-size:14px;"
+                                value="22000189"
                                 required="required"><br>
                         </div>
                     </div>
@@ -117,7 +135,7 @@
                     <div class="time1">
                         <p>1-1. 원하는 요일과 시간 선택해주세요.</p>
                         <label>
-                            <select name="요일" style="width:100px;" id="select1" required="required">
+                            <select name="요일" style="width:100px;" id="select1">
                                 <option value="">요일</option>
                                 <option value="월">월</option>
                                 <option value="화">화</option>
@@ -126,7 +144,7 @@
                                 <option value="금">금</option>
                             </select>
 
-                            <select name="time" style="width:100px;" id="select2" required="required">
+                            <select name="time" style="width:100px;" id="select2">
                                 <option value="">시간 선택</option>
                                 <option value="08:00">08:00 AM</option>
                                 <option value="08:30">08:30 AM</option>
@@ -245,13 +263,13 @@
 
                     <div class="type">
                         <p>2. 상담시 원하는 주제에 표시 부탁드려요(다중선택 가능)</p>
-                        <input type="checkbox" id="sub1" name="sub1" value="진로" checked="checked">
-                        <label for="sub1">학점</label>
+                        <input type="checkbox" id="sub1" name="sub1" value="진로">
+                        <label for="sub1">진로</label>
 
                         <input type="checkbox" id="sub2" name="sub2" value="학점">
-                        <label for="sub2">프로젝트</label>
+                        <label for="sub2">학점</label>
 
-                        <input type="checkbox" id="sub3" name="sub3" value="프로젝트">
+                        <input type="checkbox" id="sub3" name="sub3" value="프로젝트" checked="checked">
                         <label for="sub3">프로젝트</label>
 
                         <input type="checkbox" id="sub4" name="sub4" value="개인고민">
@@ -268,7 +286,7 @@
                         <p>3. 특별히 원하는 날짜가 있다면 골라주세요.</p>
                         <label for="Date">날짜:
                         </label>
-                        <input type="date" id="Date" name="Date">
+                        <input type="date" id="date" name="Date">
                     </div>
 
                     <div class="word">
@@ -301,30 +319,7 @@
             </form>
 
         </div>
-        <script src="/index.js">
-
-            // URL 매개변수를 가져와서 해당 정보를 표시
-            const urlParams = new URLSearchParams(window.location.search);
-            const name = urlParams.get('name1');
-            const studentId = urlParams.get('number1');
-            const day1 = urlParams.get('day1');
-            const time1 = urlParams.get('time1');
-
-            document
-                .getElementById('name1')
-                .textContent = name;
-            document
-                .getElementById('name1')
-                .value = name;
-            document
-                .getElementById('number1')
-                .value = studentId;
-            document
-                .getElementById('day1')
-                .value = day1;
-            document
-                .getElementById('time1')
-                .value = time1;;
+        <script>
 
             // 뒤로 가기 버튼을 클릭했을 때 이전 페이지로 이동
             function goBack() {
@@ -335,39 +330,37 @@
 
             function edit_confirm() {
 
-                if (validateForm()) {
-                    if (confirm("수정하시겠습니까?")) {
+                if (confirm("수정하시겠습니까?")) {
+                    if(validateForm()){
                         alert("수정됨");
-                        window.location.href = "index.html";
+                    window.location.href = "index.html";
                     }
-
+  
                 }
 
             }
 
             function delete_confirm() {
 
-                if (validateForm()) {
-                    if (confirm("삭제하시겠습니까?")) {
-                        alert("삭제됨");
-                        window.location.href = "index.html";
-                    }
-
+                if (confirm("삭제하시겠습니까?")) {
+                    alert("삭제됨");
+                    window.location.href = "index.html";
                 }
 
             }
+
             function validateForm() {
                 var name = document
-                    .getElementById("name1")
+                    .getElementById("name")
                     .value;
                 var email = document
-                    .getElementById("email1")
+                    .getElementById("email")
                     .value;
                 var pnumber = document
-                    .getElementById("pnumber1")
+                    .getElementById("pnumber")
                     .value;
                 var number = document
-                    .getElementById("number1")
+                    .getElementById("number")
                     .value;
                 var select1 = document
                     .getElementById("select1")
@@ -376,24 +369,22 @@
                     .getElementById("select2")
                     .value;
 
-                if (name === "") {
+                if (name.trim() == "") {
                     alert("이름을 입력하세요.");
                     return false;
                 }
 
-                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                if (!email.match(emailPattern)) {
+                if (email === "") {
                     alert("올바른 이메일 주소를 입력하세요.");
                     return false;
                 }
 
-                var phoneNumberPattern = /^\d+$/;
-                if (!pnumber.match(phoneNumberPattern)) {
+                if (pnumber === "") {
                     alert("올바른 전화번호를 입력하세요.");
                     return false;
                 }
 
-                if (!number.match(phoneNumberPattern)) {
+                if (number === "") {
                     alert("올바른 학번을 입력하세요.");
                     return false;
                 }

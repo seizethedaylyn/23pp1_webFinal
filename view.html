@@ -77,40 +77,30 @@
             </div>
         </div>
 
-        <script src="/index.js">
+        <script>
+            // URL 매개변수를 가져와서 해당 정보를 표시
             const urlParams = new URLSearchParams(window.location.search);
-            const name = urlParams.get('name1');
-            const studentId = urlParams.get('number1');
+            const name = urlParams.get('name');
+            const studentId = urlParams.get('student_id');
             const day1 = urlParams.get('day1');
             const time1 = urlParams.get('time1');
-
-            document
-                .getElementById('name1')
-                .value = name;
-            document
-                .getElementById('number1')
-                .value = studentId;
-            document
-                .getElementById('day1')
-                .value = day1;
-            document
-                .getElementById('time1')
-                .value = time1;
-
+        
+            document.getElementById('name').textContent = name;
+            document.getElementById('student-id').textContent = studentId;
+            document.getElementById('day1').textContent = day1;
+            document.getElementById('time1').textContent = time1;
+        
             // 뒤로 가기 버튼을 클릭했을 때 이전 페이지로 이동
             function goBack() {
-                window
-                    .history
-                    .back();
+                window.history.back();
             }
-
+        
             function delete_confirm() {
-
                 if (confirm("삭제하시겠습니까?")) {
                     alert("삭제됨");
                 }
                 window.location.href = "index.html";
             }
-        </script>
+        </script>        
     </body>
 </html>

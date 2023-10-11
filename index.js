@@ -25,7 +25,7 @@ select5.options[4].selected = true;
 const select6 = document.getElementById('select6');
 select6.options[16].selected = true;
 
-const date = document.getElementById('Date');
+const date = document.getElementById('date1');
 date.value = "2023-10-15";
 
 const content = document.getElementById('textarea1');
