@@ -280,7 +280,17 @@
                     alert("학번을 입력하세요.");
                     return false;
                 }
-
+                
+                if (email === "") {
+                    alert("이메일을 입력하세요.");
+                    return false;
+                }
+                if (day1 === ""|| time1 === "") {
+                    alert("상담 시간을 입력하세요.");
+                    return false;
+                }
+                
+                
                 if (pnumber === "") {
                     alert("전화번호를 입력하세요.");
                     return false;
