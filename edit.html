@@ -27,7 +27,7 @@
                     <p>
                         <strong>이름
                         </strong>김채린
-                        <span id="name" ></span></p>
+                        <span id="name"></span></p>
                     <p>
                         <strong>학번:
                         </strong>
@@ -331,11 +331,11 @@
             function edit_confirm() {
 
                 if (confirm("수정하시겠습니까?")) {
-                    if(validateForm()){
+                    if (validateForm()) {
                         alert("수정됨");
-                    window.location.href = "index.html";
+                        window.location.href = "index.html";
                     }
-  
+
                 }
 
             }
@@ -362,11 +362,11 @@
                 var number = document
                     .getElementById("number")
                     .value;
-                var select1 = document
-                    .getElementById("select1")
+                var day1 = document
+                    .getElementsByName("요일")[0]
                     .value;
-                var select2 = document
-                    .getElementById("select2")
+                var time1 = document
+                    .getElementsByName("time")[0]
                     .value;
 
                 if (name.trim() == "") {
@@ -389,8 +389,8 @@
                     return false;
                 }
 
-                if (select1 === "" || select2 === "") {
-                    alert("1-1 섹션의 요일과 시간을 선택하세요.");
+                if (day1 === ""|| time1 === "") {
+                    alert("상담 시간을 입력하세요.");
                     return false;
                 }
 
